@@ -1,4 +1,9 @@
--r ./requirements.txt
+pyserial
+requests
+pywin32; platform_system=="Windows"
+suds
+yattag
+lark
 
 # https://github.com/pytest-dev/pytest/issues/10428
 pytest==7.1.3
