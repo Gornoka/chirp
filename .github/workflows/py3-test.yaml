@@ -51,6 +51,10 @@ jobs:
         id: pyinst
         with:
           python-version: '3.12'
+      - name : install gtk
+        run: |
+          sudo apt-get update
+          sudo apt-get install libgtk-3-dev -y
       - run: "sudo ln -s ${{ steps.pyinst.outputs.python-path }} /usr/local/bin/python3.12"
       - run: "echo $PATH; ls -l /usr/local/bin"
       - name: Run tox
